@@ -6,6 +6,7 @@ import styled from "styled-components/native";
 import { RestaurantList } from "../components/restaurant-list.styles";
 
 import { SafeArea } from "../../../components/utility/safe.area.component";
+import { FadeInView } from "../../../components/animations/fade.animation";
 import { RestaurantInfoCard } from "../components/restaurant-info.card";
 import { Search } from "../components/search.component";
 import { FavouritesBar } from "../../../components/favourites/favourites-bar.component";
@@ -57,7 +58,9 @@ export const RestaurantsScreen = ({ navigation }) => {
                     })
                   }
                 >
-                  <RestaurantInfoCard restaurant={item} />
+                  <FadeInView>
+                    <RestaurantInfoCard restaurant={item} />
+                  </FadeInView>
                 </TouchableOpacity>
               );
             }}
