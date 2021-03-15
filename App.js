@@ -29,7 +29,7 @@ export default function App() {
     setTimeout(() => {
       firebase
         .auth()
-        .signInWithEmailAndPassword("islandhuynh@gmail.com", "Test123")
+        .signInWithEmailAndPassword("island@gmail.com", "Ilikepie123!")
         .then((user) => {
           setIsAuthenticated(true);
         })
