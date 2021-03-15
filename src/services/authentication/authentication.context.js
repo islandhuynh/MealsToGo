@@ -7,7 +7,7 @@ import * as firebase from "firebase";
 export const AuthenticationContext = createContext();
 
 export const AuthenticationContextProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState(null);
   const [error, setError] = useState([]);
 
@@ -36,7 +36,7 @@ export const AuthenticationContextProvider = ({ children }) => {
       .createUserWithEmailAndPassword(email, password)
       .then((u) => {
         setUser(u);
-        isLoading(false);
+        setIsLoading(false);
       })
       .catch((err) => {
         setIsLoading(false);
