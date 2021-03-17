@@ -8,7 +8,7 @@ export const locationRequest = async (searchTerm) => {
     let data = await res.json();
     return data;
   } catch (error) {
-    console.log("Error:", error);
+    console.log("Location Request Error:", error);
   }
 };
 

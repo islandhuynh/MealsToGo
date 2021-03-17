@@ -33,7 +33,7 @@ module.exports.placesRequest = (request, response, client) => {
   }
   client
     .placesNearby({
-      parameters: {
+      params: {
         location,
         radius: 1500,
         type: "restaurant",

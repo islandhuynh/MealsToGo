@@ -11,7 +11,7 @@ module.exports.geocodeRequest = (request, response, client) => {
 
   client
     .geocode({
-      parameters: {
+      params: {
         address: city,
         key: functions.config().google.key,
       },
