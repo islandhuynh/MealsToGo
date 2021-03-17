@@ -12,3 +12,7 @@ config
 
 # macOS
 .DS_Store
+
+
+*/node_modules/**/*
+.runtimeconfig.json
