@@ -3,7 +3,7 @@ import camelize from "camelize";
 export const locationRequest = async (searchTerm) => {
   try {
     const res = await fetch(
-      `https://us-central1-mealstogo-f5ccd.cloudfunctions.net/geocode?city=${searchTerm}`
+      `https://us-central1-mealstogo-f5ccd.cloudfunctions.net/geocode?address=${searchTerm}`
     );
     let data = await res.json();
     return data;
